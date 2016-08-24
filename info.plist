@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>be.wains.blog.netatmo</string>
+	<key>category</key>
+	<string>Home automation</string>
+	<key>connections</key>
+	<dict>
+		<key>5CEF0DD2-CA9E-4FFB-B497-113309A7241A</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>5D1599BE-02FA-4BA3-83AB-B44D54835BAA</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Sébastien Wains</string>
+	<key>description</key>
+	<string>Weather and thermostat information</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Netatmo v0.2</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>netatmo</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Please wait...</string>
+				<key>script</key>
+				<string>php ./netatmo.php</string>
+				<key>subtext</key>
+				<string>Weather and thermostat info</string>
+				<key>title</key>
+				<string>Netatmo</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>5CEF0DD2-CA9E-4FFB-B497-113309A7241A</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>5D1599BE-02FA-4BA3-83AB-B44D54835BAA</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>2016-02-13
+
+Log into https://dev.netatmo.com/
+Create an app
+Save the client ID and client secret
+Edit netatmo.php with those values under $client_id and $client_secret, and your username and password
+
+This workflow only supports two modules (indoor and outdoor) for now, as I don’t have any other Netatmo device (but feel free to send me a rain gauge and I’d be happy to help :D)</string>
+	<key>uidata</key>
+	<dict>
+		<key>5CEF0DD2-CA9E-4FFB-B497-113309A7241A</key>
+		<dict>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+		<key>5D1599BE-02FA-4BA3-83AB-B44D54835BAA</key>
+		<dict>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string>https://blog.wains.be</string>
+</dict>
+</plist>
